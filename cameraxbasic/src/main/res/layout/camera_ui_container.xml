@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/camera_ui_container"
+    android:layoutDirection="ltr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.chareem.camerax.basic.facetracker.OverlayView
+        android:id="@+id/tracking_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.chareem.camerax.basic.utils.FlashSwitchView
+        android:layout_margin="@dimen/margin_xsmall"
+        android:visibility="visible"
+        android:id="@+id/flash_bt"
+        android:layout_width="40dp"
+        android:layout_height="40dp" />
+
+    <com.chareem.camerax.basic.utils.CameraSoundView
+        android:layout_margin="@dimen/margin_xsmall"
+        android:visibility="visible"
+        android:id="@+id/sound_bt"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"/>
+    <!-- Camera control and gallery buttons -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:id="@+id/location_tv"
+            android:text="Search Location..."
+            android:fontFamily="@font/opensans_semibold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:gravity="center|bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:gravity="center"
+                android:id="@+id/switch_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/round_button_large">
+                <ImageButton
+                    android:id="@+id/camera_switch_button"
+                    android:layout_width="@dimen/round_button_medium"
+                    android:layout_height="@dimen/round_button_medium"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:padding="@dimen/spacing_small"
+                    android:scaleType="fitCenter"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_switch"
+                    android:contentDescription="@string/switch_camera_button_alt" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <LinearLayout
+                android:layout_toStartOf="@+id/photo_layout"
+                android:layout_toEndOf="@id/switch_layout"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/camera_capture_button"
+                    android:layout_width="@dimen/round_button_large"
+                    android:layout_height="@dimen/round_button_large"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/ic_shutter"
+                    android:contentDescription="@string/capture_button_alt" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_alignParentEnd="true"
+                android:gravity="center"
+                android:id="@+id/photo_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/round_button_large">
+                <ImageButton
+                    android:id="@+id/photo_view_button"
+                    android:layout_width="@dimen/round_button_medium"
+                    android:layout_height="@dimen/round_button_medium"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:padding="@dimen/spacing_large"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/ic_outer_circle"
+                    app:srcCompat="@drawable/ic_photo"
+                    android:contentDescription="@string/gallery_button_alt" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>

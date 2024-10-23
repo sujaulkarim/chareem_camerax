@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<dimen name="margin_xsmall">200dp</dimen>
+    <dimen name="margin_small">400dp</dimen>
+    <dimen name="margin_medium">600dp</dimen>
+    <dimen name="margin_large">800dp</dimen>
+    <dimen name="margin_xlarge">1150dp</dimen>
+    <dimen name="margin_xxlarge">1550dp</dimen>
+
+    <dimen name="spacing_small">50dp</dimen>
+    <dimen name="spacing_medium">100dp</dimen>
+    <dimen name="spacing_large">200dp</dimen>
+
+    <dimen name="stroke_small">50dp</dimen>
+    <dimen name="stroke_medium">100dp</dimen>
+    <dimen name="stroke_large">150dp</dimen>
+
+    <dimen name="round_button_small">400dp</dimen>
+    <dimen name="round_button_smedium">600dp</dimen>
+    <dimen name="round_button_medium">800dp</dimen>
+    <dimen name="round_button_large">1150dp</dimen>
+
+    <dimen name="rect_button_margin">150dp</dimen>
+    <dimen name="rect_button_width">1000dp</dimen>
+    <dimen name="rect_button_height">300dp</dimen>
+    <dimen name="shutter_button_margin">1000dp</dimen>-->
+</resources>
